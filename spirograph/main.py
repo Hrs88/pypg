@@ -44,10 +44,10 @@ class Spiro(object):
         self.t.color(*self.col)
     def Draw(self):
         '''一次性画完'''
-        self.DrawComplete = True
         for a in range(0,360*self.nRot+1,self.step):
             a = math.radians(a)
             self.t.setpos(self.x + self.getx(a),self.y + self.gety(a))
+        self.DrawComplete = True
     def update(self):
         '''逐步画'''
         if self.DrawComplete:
